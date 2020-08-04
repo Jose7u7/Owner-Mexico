@@ -421,6 +421,18 @@ background: url('owner2.jpg') no-repeat center center/cover;*/
     background-color: gray;
     background: url('fotom.jpeg') no-repeat center center/cover; */
 }
+.fondom2 {
+    height: 1000px;
+    font-size: 100%;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    font-family: 'Source Sans Pro', helvetica, sans-serif;
+    color: #333333;
+    line-height: 1.6;
+    font-weight: normal;
+    background-color: gray;
+    background: url('ropa.jpg') no-repeat center center/cover;*/
+}
 .fondoh {
     height: 1000px;
     font-size: 100%;
@@ -432,6 +444,19 @@ background: url('owner2.jpg') no-repeat center center/cover;*/
     font-weight: normal;
     background-color: gray;
     background: url('fotoh.jpeg') no-repeat center center/cover;
+    */
+}
+.fondoh2 {
+    height: 1000px;
+    font-size: 100%;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    font-family: 'Source Sans Pro', helvetica, sans-serif;
+    color: #333333;
+    line-height: 1.6;
+    font-weight: normal;
+    background-color: gray;
+    background: url('fotoh2.jpeg') no-repeat center center/cover;
     */
 }
 div.screen {
