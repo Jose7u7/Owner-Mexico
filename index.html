@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Owner</title>
+  <link rel="stylesheet" href="./style.css">
+  <meta charset="UTF-8">
+  <title>Slider Animation Effect</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Playfair+Display:700,900'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat:400,700'><link rel="stylesheet" href="./style2.css">
+
+<style>
+div.ejemplo{
+position:fixed;
+margin-top: 100px;
+}
+div.slide-content{
+  position: absolute;
+}
+
+</style>
+
+
+
+</head>
+<body>
+
+ 
+
+<!-- partial:index.partial.html -->
+
+
+
+<div class ="fondo1">
+<div class="screen">
+
+  <header>
+    <a class="target-burger">
+      <ul class="buns">
+        <li class="bun"></li>
+        <li class="bun"></li>
+      </ul>
+      <!--buns-->
+    </a>
+    <!--target-burger-->
+  </header>
+ 
+ 
+  <nav class="main-nav" role="navigation">
+    <ul>
+   
+      <li><a href="ropa_mujer.html"><span>Ropa Mujer</span></a></li>
+     
+      <li><a href="ropa_hombre.html"><span>Ropa Hombre</span></a></li>
+    
+    </ul>
+  </nav>
+
+ 
+  <!--main-nav-->
+
+  <!--contaienr-->
+</div>
+
+</div>
+<!--screen-->
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./script.js"></script>
+<div id="app" class="wrapper" v-cloak v-bind:class="{'is-previous': isPreviousSlide, 'first-load': isFirstLoad}">
+
+            <div class="slide-wrapper" 
+
+            
+                 v-for="(slide, index) in slides" 
+                 v-bind:class="{ active: index === currentSlide }"
+                 v-bind:style="{ 'z-index': (slides.length - index), 'background-image': 'url(' + slide.bgImg + ')' }">
+                <div class="slide-inner">
+
+
+                  
+                    <div class="slide-bg-text">
+                        <p>{{ slide.headlineFirstLine }}</p>
+                        <p>{{ slide.headlineSecondLine }}</p>
+                    </div>
+              
+                    <div class="slide-content">
+                        <h1 class="slide-content-text"><p>{{ slide.headlineFirstLine }}</p><p>{{ slide.headlineSecondLine }}</p></h1><a class="slide-content-cta">Calidad a Bajo Costo</a></div>
+                    <h2 class="slide-side-text"><span>{{ slide.sublineFirstLine }} / </span><span>{{ slide.sublineSecondLine }}</span></h2></div>
+            </div>
+
+
+     
+        <div class="controls-container">
+            <button class="controls-button" 
+                    v-for="(slide, index) in slides"
+                    v-bind:class="{ active: index === currentSlide }"
+                    v-on:click="updateSlide(index)">{{ slide.headlineFirstLine1 }} {{ }}</button>
+        </div>
+        <div class="pagination-container">
+            <span class="pagination-item"
+                  v-for="(slide, index) in slides"
+                  v-bind:class="{ active: index === currentSlide }"
+                  v-on:click="updateSlide(index)"></span>
+        </div>
+        
+    </div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.8/vue.min.js'></script><script  src="./script2.js"></script>
+
+</body>
+</html>
